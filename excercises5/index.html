@@ -7,6 +7,12 @@
         <script type="text/javascript">
             //Using the form below, implement the following:
             //1. Createe a Javascript function named processForm
+            function processForm(){
+                var login_output = document.getElementById('username');
+                var password_output = document.getElementById('password');
+                doucment.getElementById('login_output').innerHTML = login_output;
+                doucment.getElementById('password_output').innerHTML = password_output;
+            }
             //2. Implement an onclick function such that when onclick is called
             //   in the html, it calls a Javascript function processForm
             //3. In side the processForm function, retrieve the login and password
@@ -17,7 +23,12 @@
             //Implement a clear function that when the clear button is clicked, it
             //will remove the data inputted in the login and password input. Bonus points
             //if you can get all the inputs at once and clear them in a loop.
-    
+            function clearForm(){
+                document.getElementsByClassName('form-control').innerHTML = "";
+                //for(var i = 0; i < ; i++) {
+
+                //}
+            }
     
         </script>
     </head>
@@ -53,10 +64,10 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <button type="button" class="btn btn-success" onclick="">
+                    <button type="button" class="btn btn-success" onclick="processForm();">
                         Submit
                     </button>
-                    <button type="button" class="btn btn-default" onclick="">
+                    <button type="button" class="btn btn-default" onclick="clearForm();">
                         Clear
                     </button>
                 </div>

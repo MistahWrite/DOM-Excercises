@@ -15,13 +15,22 @@
     </body>
     <script type="text/javascript">
         //Get all the paragraphs by their class name.
+        var item = document.getElementsByClassName('item');
         //The function to do this should return an array.
         //Iterate through each element do the following:
+        for(var i = 0; i < item.length; i++) {
         //1. Change the text color to blue
+        item[i].style.color = "blue";
         //2. Change the font size to 30px
+        item[i].style.fontSize = "30px";
         //3. Add a green border
+        item[i].style.border = "2px solid green";
         //4. Change the top margin and bottom margin to 5px
+        item[i].style.topMargin = "5px";
+        item[i].style.bottomMargin = "5px";
         //5. Add a 10px padding
+        item[i].style.padding = "10px";
+        }
 
     </script>
 

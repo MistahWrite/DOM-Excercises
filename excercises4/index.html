@@ -17,13 +17,17 @@
     </body>
     <script type="text/javascript">
         //Get all the paragraphs by their class name.
+        var item = document.getElementsByClassName('item');
         //The function to do this should return an array.
         //Iterate through each element do the following:
+        var text;
+        for(var i = 0; i < item.length; i++) {
         //1. Get the current text in the each element
         //2. Concatenate that text too a single string
+        text += item[i].innerHTML;
+        }
         //3. Output the concatenated text to the output div
-
-
+        document.getElementById('output').innerHTML = text;
     </script>
 
 </html>
